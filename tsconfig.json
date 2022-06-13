@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "paths": {
+      "@packages/*": ["./packages/*"]
+    },
+    "types": ["jest"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue"
+  ],
+  "exclude": [
+    "src/router.ts",
+    "packages/**/__tests__/index.spec.ts",
+    "scripts/jest.ts"
+  ]
+}

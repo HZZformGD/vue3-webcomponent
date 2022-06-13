@@ -1,0 +1,29 @@
+<template>
+  <div class="flex">
+    <h3>这是横着的第一个</h3>
+    <xizi-row align="center">
+      <xizi-col :flex="0">
+        <p>这是第一个</p>
+      </xizi-col>
+      <xizi-col :flex="0">
+        <p>这是第二个</p>
+      </xizi-col>
+    </xizi-row>
+  </div>
+  <div class="flex">
+    <h3>这是竖着的第一个</h3>
+    <xizi-row direction="column">
+      <xizi-col :flex="0">
+        <p>这是第一个</p>
+      </xizi-col>
+      <xizi-col :flex="0">
+        <p>这是第二个</p>
+      </xizi-col>
+    </xizi-row>
+  </div>
+</template>
+
+<script setup>
+import { Row, Col, registerCustomElement } from "../../index";
+registerCustomElement(Row, Col);
+</script>

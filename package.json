@@ -1,0 +1,46 @@
+{
+  "name": "vite-wc-build-test",
+  "private": true,
+  "version": "0.0.0",
+  "bin": {
+    "cli": "./bin.js"
+  },
+  "scripts": {
+    "dev": "vite --config ./build/preview.config.ts",
+    "build:doc": "vue-tsc --noEmit && vite build --config ./build/doc.config.ts && node scripts/copyDir.js",
+    "build:lib": "vue-tsc --noEmit && vite build --config ./build/es.config.ts && node scripts/copyDir.js ./es && vue-tsc --noEmit && vite build --config ./build/umd.config.ts",
+    "preview": "vite preview",
+    "jest": "jest packages"
+  },
+  "dependencies": {
+    "rollup-plugin-tinyimg": "^1.0.3",
+    "vue": "^3.2.25",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/user-event": "^14.1.1",
+    "@testing-library/vue": "^6.4.2",
+    "@types/jest": "^27.4.1",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/babel-preset-app": "^5.0.4",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "babel-jest": "26.0.0",
+    "chalk": "^5.0.1",
+    "commander": "^9.2.0",
+    "jest": "26.0.0",
+    "less": "^4.1.2",
+    "prismjs": "^1.28.0",
+    "ts-jest": "26.4.4",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.2",
+    "vite-plugin-dts": "^1.1.0",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-md": "^0.12.4",
+    "vue-jest": "^5.0.0-alpha.10",
+    "vue-tsc": "^0.29.8"
+  }
+}

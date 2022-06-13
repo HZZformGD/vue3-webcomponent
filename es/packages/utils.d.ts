@@ -1,0 +1,15 @@
+export declare type Mod = string | {
+    [key: string]: any;
+};
+export declare type Mods = Mod | Mod[];
+/**
+ * bem helper
+ * b() // 'button'
+ * b('text') // 'button__text'
+ * b({ disabled }) // 'button button--disabled'
+ * b('text', { disabled }) // 'button__text button__text--disabled'
+ * b(['disabled', 'primary']) // 'button button--disabled button--primary'
+ */
+export declare function createBEM(name: string): (el?: Mods | undefined, mods?: Mods | undefined) => Mods;
+export declare type BEM = ReturnType<typeof createBEM>;
+export declare function createNamespace(name: string): readonly [string, string];
